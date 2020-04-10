@@ -1,66 +1,37 @@
-//Log to Console
-console.log("Hello World!");
-console.log(1234);
-console.log(true);
+//PRIMITIVE TYPES
 
-var greeting = 'hello';
-console.log(greeting);
-console.log({a:1,b:2,c:true});
-console.table({a:1,b:2,c:true});
-console.error('This is an error');
-console.clear();
-console.warn('This is a warning!');
-console.time('Hello!');
-console.log(greeting);
-console.log({a:1,b:2,c:true});
-console.table({a:1,b:2,c:true});
-console.error('This is an error');
-console.log(greeting);
-console.log({a:1,b:2,c:true});
-console.table({a:1,b:2,c:true});
-console.error('This is an error');
-console.log(greeting);
-console.log({a:1,b:2,c:true});
-console.table({a:1,b:2,c:true});
-console.error('This is an error');
-console.timeEnd('Hello!');
-console.clear();
-/* 
-Multi
-Line
-Comments
-*/
+//String
+const name = 'Yeon Jeffrey Seo';
+//Number
+const age = 31;
+//Boolean
+const getMarried = false;
+//Null
+const car = null;
+//Undefined
+let idiot;
+//Symbol
+const sym = Symbol();
 
-//var, let, const
-var name = 'John Doe';
-console.log(name);
-name = 'Steve Smith';
-console.log(name);
-
-
-//Init var
-var sayHi;  //declare
-console.log(sayHi);
-sayHi='Hello World!'; //initialize
-console.log(sayHi);
-
-//letters, numbers, _(underscores), $(money sign)
-//Can not start with number
-
-var firastName = 'Yeon';    //camel case
-var middle_name = 'Jeffrey';    //Underscore
-var LastName = 'Seo';   //Pascal case - recommended for constructor, class, function
+console.log(typeof name);
+console.log(typeof age);
+console.log(typeof getMarried);
+console.log(typeof car);
+console.log(typeof idiot);
+console.log(typeof sym);
 console.clear();
 
-const person = {
-    name : 'Yeon Jeffrey Seo',
-    age : 31
+//REFERENCE TYPES - Objects
+//Array
+const hobbies = ['Watching YouTube', 'Basketball'];
+//Object Literal
+const address = {
+    city : 'Seoul',
+    road : 'Nangok-ro'
 }
-console.log(person);
-person.name = 'Ryuha';
-console.log(person);
-console.clear();
+const today = new Date();
 
-const numbers = [1,2,3,4,5,6];
-numbers.push(7);
-console.log(numbers);
+console.log(today);
+console.log(typeof hobbies);
+console.log(typeof address);
+console.log(typeof today);
