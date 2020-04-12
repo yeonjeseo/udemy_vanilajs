@@ -1,41 +1,25 @@
-const person = {
-    firstName: "Steve",
-    lastName: 'Smith',
-    age: 30,
-    email: 'steve@hotmail.com',
-    hobby : ['music', 'sports'],
-    address:{
-        city: 'Miami',
-        state: 'FL'
-    },
-    getBirthYear: function(){
-        return 2019 - this.age;
-    }
-
-};
-
 let val;
-val = person;
 
-//Get specific value
-val = person.firstName;
-val = person["firstName"];
-val = person.age;
-val = person.hobby[0];
-val = person.address.state;
-val = person.address['city'];
-val = person.getBirthYear();
+const today = new Date();
+let birthday = new Date("9-10-1981 11:25:00");
+birthday = new Date("September 10 1981");
+birthday = new Date("9/10/1981");
 
-console.log(val);
+val = today.getMonth();
+val = today.getDate();
+val = today.getDay();
+val = today.getFullYear();
+val = today.getHours();
+val = today.getMinutes();
+val = today.getSeconds();
+val = today.getMilliseconds();
+val = today.getTime();  //Seconds since 1-1-1970
 
-const people = [
-    {name : 'John', age : 30},
-    {name : 'Mike', age : 32},
-    {name : 'Nancy', age : 40}
-];
+birthday.setMonth(2);
+birthday.setDate(12);
+birthday.setFullYear(1985);
+birthday.setHours(3);
+birthday.setMinutes(30);
+birthday.setSeconds(25);
 
-for(let i =0; i < people.length; i++){
-    console.log(people[i]);
-    console.log(people[i].age);
-    console.log(people[i].name);
-}
+console.log(birthday);
