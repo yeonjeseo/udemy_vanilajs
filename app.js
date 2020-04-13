@@ -1,46 +1,59 @@
-// document.getElementsByClassName
-// const items = document.getElementsByClassName('collection-item');
-// console.log(items);
-// console.log(items[0]);
-// items[0].style.color = 'red';
-// items[3].textContent = 'Hello';
+let val;
 
-// const listItems = document.querySelector('ul').getElementsByClassName('collection-item');
-// console.log(listItems);
+const list = document.querySelector("ul.collection");
+const listItem = document.querySelector("li.collection-item:first-child");
 
-// document.getElementsByTagName
-// let lis = document.getElementsByTagName('li');
-// console.log(lis);
-// console.log(lis[0]);
-// lis[0].style.color = 'red';
-// lis[3].textContent = 'Hello';
+val = listItem;
+val = list;
 
-// // Convert HTML Collection into array
-// lis = Array.from(lis);
-// lis.reverse();
-// lis.forEach(function(li, index){
-//     console.log(li.className);
-//     li.textContent = `${index} : Hello!`;
-// })
-// console.log(lis);
+// Get child nodes
+val = list.childNodes;
+// val = list.childNodes[0];
+// val = list.childNodes[0].nodeName;
+// val = list.childNodes[1].nodeType;
+val = list.childNodes[3].nodeType;
 
-// document.querySelectorAll
-const items = document.querySelectorAll("ul.collection li.collection-item");
-console.log(items);
+// Type of node
+// 1 - Element
+// 2 - Attribute (deprecated)
+// 3 - Text Code    -- >> recognize carriage return / line feed as a Text Code
+// 8 - Comment
+// 9 - Document itself
+// 10 - Doctype
 
-items.forEach(function (items, index) {
-    items.textContent = `${index} : Hello!!!!`;
-});
+// Get children element nodes
+val = list.children;
+val = list.children[1];
+list.children[1].textContent = "Hello!";
 
-const liOdd = document.querySelectorAll("li:nth-child(odd)");
-const liEven = document.querySelectorAll("li:nth-child(even)");
+// Children of children
+val = list.children[3].childNodes;
+val = list.children[3].children[0];
+val = list.children[3].children[0].id = "test-link";
 
-liOdd.forEach(function (li, index) {
-    li.style.background = " #ccc";
-});
+// First child
+val = list.firstChild;
+val = list.firstElementChild;
 
-for (let i = 0; i < liEven.length; i++) {
-    liEven[i].style.background = "#f4f4f4";
-}
+// Last child
+val = list.lastChild;
+val = list.lastElementChild;
 
-console.log(items);
+// Count child elements
+val = list.childElementCount;
+
+// Get parent node
+val = listItem.parentNode;
+val = listItem.parentElement;
+val = listItem.parentElement.parentElement;
+val = listItem.parentElement.parentElement.parentElement;
+
+// Get next sibling
+val = listItem.nextSibling;
+val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
+
+// Get previous sibling
+// val = listItem.previousSibling;
+// val = listItem.previousElementSibling;
+
+console.log(val);
