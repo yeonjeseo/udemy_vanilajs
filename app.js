@@ -1,39 +1,49 @@
-let val;
+// document.getElementById()
 
-val = document;
-val = document.all;
-val = document.all[2];
-val = document.all.length;
-val = document.head;
-val = document.body;
-val = document.doctype;
-val = document.domain;
-val = document.URL;
-val = document.characterSet;
-val = document.contentType;
+// console.log(document.getElementById('task-title'));
 
-val = document.forms;
-val = document.forms[0];
-val = document.forms[0].id;
-val = document.forms[0].method;
-val = document.forms[0].action;
+// // Get things from the element
+// console.log(document.getElementById('task-title').id);
+// console.log(document.getElementById('task-title').className);
 
-val = document.links;
-val = document.links[0];
-val = document.links[0].id;
-val = document.links[0].className;
-val = document.links[0].classList[0];
 
-val = document.images;
+// // Change styling
+// document.getElementById('task-title').style.background = 'black';
+// document.getElementById('task-title').style.color = '#fff';
+// document.getElementById('task-title').style.padding = '5px';
+// // document.getElementById('task-title').style.display = 'none';
 
-val = document.scripts;
-val = document.scripts[2].getAttribute("src");
+// // Change content
+// document.getElementById('task-title').textContent = 'Task List';
+// document.getElementById('task-title').innerText = 'My Tasks';
+// document.getElementById('task-title').innerHTML = '<span style="color:red">Task Lisk</span';
 
-let scripts = document.scripts;
+// Cast by variable
+// const taskTitle = document.getElementById('task-title');
+// taskTitle.style.background = 'black';
+// taskTitle.style.color = '#fff';
+// taskTitle.style.padding = '5px';
+// taskTitle.textContent = 'Task List';
+// taskTitle.innerText = 'My Tasks';
+// taskTitle.innerHTML = '<span style="color:red">Task Lisk</span';
 
-let scriptsArr = Array.from(scripts);
-scriptsArr.forEach(function(scripts) {
-    console.log(scripts.getAttribute("src"));
-})
+// document.querySelector()
+console.log(document.querySelector('#task-title'));
+console.log(document.querySelector('.card-title'));
+console.log(document.querySelector('h5'));
 
-console.log(val);
+// Single Element Selector!!! Remember this!!
+document.querySelector('li').style.color = 'red';
+document.querySelector('ul li').style.color = 'blue';
+document.querySelector('li:last-child').style.color = 'red';
+document.querySelector('li:nth-child(3)').style.color = 'yellow';
+document.querySelector('li:nth-child(4)').textContent = 'Hello World';
+document.querySelector('li:nth-child(odd)').style.background = '#ccc';
+document.querySelector('li:nth-child(even)').style.background = '#ccc';
+
+
+
+
+
+
+
