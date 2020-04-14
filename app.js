@@ -1,39 +1,42 @@
-const clearBtn = document.querySelector('.clear-tasks');
-const card = document.querySelector('.card');
+const form = document.querySelector('form');
+const taskInput = document.getElementById('task');
 const heading = document.querySelector('h5');
+const select = document.querySelector('select');
 
-// Clicked
-// clearBtn.addEventListener('click', runEvent);
+// Clear input
+taskInput.value = '';
 
-// Dobule Click
-// clearBtn.addEventListener('dblclick', runEvent);
+// form.addEventListener('submit', runEvent);
 
-// // Mouse Down
-// clearBtn.addEventListener('mousedown',runEvent);
+// Keydown 
+// taskInput.addEventListener('keydown',runEvent);
+// Keyup 
+// taskInput.addEventListener('keyup',runEvent);
+// Keypress 
+// taskInput.addEventListener('keypress',runEvent);
+// Focus
+// taskInput.addEventListener('focus', runEvent);
+// Blur
+// taskInput.addEventListener('blur', runEvent);
+// Cut
+// taskInput.addEventListener('cut', runEvent);
+// Paste
+// taskInput.addEventListener('paste', runEvent);
+// Copy
+// taskInput.addEventListener('copy', runEvent);
+// Input
+// taskInput.addEventListener('input', runEvent);
+// Change Event
+select.addEventListener('change', runEvent);
 
-// // Mouse Up
-// clearBtn.addEventListener('mouseup',runEvent);
 
-// // Mouse Enter
-// card.addEventListener('mouseenter',runEvent);
-
-// // Mouse Leave
-// card.addEventListener('mouseleave',runEvent);
-
-// // Mouse Over
-// card.addEventListener('mouseover',runEvent);
-
-// // Mouse Out
-// card.addEventListener('mouseout',runEvent);
-
-// Mouse Move
-card.addEventListener('mousemove', runEvent);
-
-
-// Event Handler
-function runEvent(e){
+function runEvent(e) {
     console.log(`EVENT TYPE : ${e.type}`);
-    heading.textContent = `Mouse X : ${e.offsetX}, Mouse Y : ${e.offsetY}`;
 
-    document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
+    console.log(e.target.value);
+
+    // heading.innerText = e.target.value;
+    // // Get input Value
+    // console.log(taskInput.value);
+    // e.preventDefault();
 }
